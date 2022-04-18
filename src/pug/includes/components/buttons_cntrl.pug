@@ -1,0 +1,16 @@
+mixin btn_row(_pic, _id) 
+    uk-button-group.uk-height-auto(style="width: 250px;" id = _id) 
+        button.uk-padding-remove(style="width: 66px; height: 66px; outline: none; border: none; background-color: transparent;")
+            img(src="/gui_btn_image?name=arrow_l.png")
+        button.uk-padding-remove(style="background-image: url('/gui_btn_image?name=button_light.png'); background-size: cover; background-origin: border-box; background-repeat: no-repeat; width: 66px; height: 66px; outline: none; border: none; background-color: transparent;")
+            img(src=_pic style="width: 56px; height: 48px;")
+        button.uk-padding-remove(style=" width: 66px; height: 66px; outline: none; border: none; background-color: transparent;")
+            img(src="/gui_btn_image?name=arrow_r.png" style="width: 66px; height: 66px;")
+    br
+
+.uk-container.uk-position-center-right(style="padding-left: 40%" id = "gui_buttons_block")
+    +btn_row("/gui_btn_image?name=ico_gun.png","buttons_row_01")
+    +btn_row("/gui_btn_image?name=ico_body.png", "buttons_row_02")
+    +btn_row("/gui_btn_image?name=ico_legs.png", "buttons_row_03")
+    +btn_row("/gui_btn_image?name=ico_bkgrnd.png", "buttons_row_04")
+    //- include arrow_cntrl/template_row.pug

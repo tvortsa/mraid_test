@@ -1,4 +1,10 @@
 /dist/
+/src/libs/threejs/examples/models
+/src/libs/threejs/examples/textures
+/src/libs/threejs/examples/sounds
+/src/libs/threejs/examples/screenshots
+/src/libs/threejs/examples/models/fonts
+/src/libs/threejs/manual
 
 /*.zip
 /*.7z

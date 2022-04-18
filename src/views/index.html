@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  Hello Deno !
+  <br>
+  <script type="text/javascript">
+    fetch('http://localhost:3001/fetch_port')
+      .then((response) => {
+        // return response.json();
+        return response.text()
+      })
+      .then((data) => {
+        let textNode = document.createTextNode(data);
+        document.body.append(textNode)
+        console.log(data);
+      });
+  </script>
+</body>
+
+</html>

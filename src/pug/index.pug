@@ -1,0 +1,27 @@
+doctype html
+html
+  include includes/head.pug
+  head
+  body
+  
+    //- #threejs_uikit_container.uk-container
+    
+    //- #uikit_gui_layer_center.uk-container.uk-position-absolute.uk-position-center-left(style="padding-left: 220px;")
+    #uikit_gui_layer_center.uk-container.uk-position-absolute.uk-position-center
+      button#main_button.uk-button.uk-button-default.uk-button-large.uk-button-primary(visible="false") 
+        span enter
+      //- include includes/components/buttons_cntrl.pug
+    #three_gui(hidden = "true")
+      #uikit_gui_layer_top.uk-container.uk-height-auto.uk-width-expand.uk-position-absolute.uk-position-top.uk-padding-small.uk-padding-remove-bottom
+        span.uk-position-relative.uk-position-bottom-center(uk-icon="icon: world")
+        include includes/components/time_counter.pug
+        include includes/components/obj_info.pug
+      #uikit_gui_layer_bottom.uk-container.uk-height-auto.uk-width-expand.uk-position-absolute.uk-position-bottom.uk-padding.uk-padding-remove-top
+        span#home_view_button.uk-position-relative.uk-position-top-center(uk-icon="icon: home")
+      #uikit_gui_layer_left.uk-container.uk-height-viewport.uk-width-auto.uk-position-absolute.uk-position-left.uk-padding-remove-right(style="padding-left: 30%")
+        span.uk-position-relative.uk-position-center-right(uk-icon="icon: user")
+        include includes/components/buttons_cntrl.pug
+      #uikit_gui_layer_right.uk-container.uk-height-viewport.uk-width-auto.uk-position-absolute.uk-position-right.uk-padding-remove-left
+        span#debug_ico.uk-position-relative.uk-position-center-left(uk-icon="icon: server")
+        include includes/components/debug_gui
+    #threejs_canvas_container.uk-container-expand.uk-height-viewport(z-index="-1")
